@@ -59,15 +59,113 @@
   content: 'MINUTES';
   position: absolute;
   top: 80%;
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing:border-box;
+  font-size:10px;
+}
+body{
+  background-color:#2f363e;
+}
+.Clock{
+  height:100vh;
+  width:100vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:#2f363e;
+  
+}
+  
+.time{
+  height:auto;
+  width:auto;
+  padding:10rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-color:#2f363e;
+  border-radius:2rem;
+  color:#fff;
+  box-shadow:1rem 5rem 7rem rgba(0,0,0,0.4),
+  inset .5rem .5rem 1rem rgba(0,0,0,0.5)
+  /*inset .5rem,.5rem,2rem rgba(0,0,0,0.2)
+  /*inset -.5rem,-.5rem,1.5rem rgba(0,0,0,0.21)*/;
+  
+  gap:1rem;
+}  
+.time span{
+  height:16rem;
+  width:15rem;
+  background-color: transparent;
+  
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size:4rem;
+  /*font-family: 'Tourney', cursive;*/
+  position: relative;
+  border-top-right-radius:2.5rem;
+}
+#hours{
+  color:rgb(205,10,100);
+}
+#minutes{
+  color:rgb(250,250,50)
+}
+#seconds{
+  color:rgb(0,255,0)
+}
+#session{
+  color:rgb(180,180,180)
+}
+#hours,#minutes,#seconds,#session{
+  font-size:5rem;
+  background:none;
+  
+}
+#cln1,#cln2{
+  padding:0rem;
+  height:1.5rem;
+  width:1.5rem;
+}
+#hours,#minutes,#seconds,#session::before {
+  letter-spacing:.4rem;
+  
+}
+
+
+#hours::before{
+  content:'HOURS';
+  position: absolute;
+  top:80%;
+  height:auto;
+  width:95%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:.3rem;
+  background-color:none;
+  border-bottom-left-radius:1.5rem;
+  margin-top:.9rem;
+  font-size:2.5rem;
+  
+}
+#minutes::before {
+  content: 'MINUTES';
+  position: absolute;
+  top: 80%;
   height: auto;
   width: 95%;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: .3rem;
-  background-color: orange;
   border-bottom-left-radius:1.5rem;
   margin-top: .9rem;
+  background-color: none;
+  font-size:2.5rem;
 }
 #seconds::before {
   content: 'SECONDS';
@@ -79,9 +177,11 @@
   align-items: center;
   justify-content: center;
   padding: .3rem;
-  background-color: orange;
+  background-color: none;
+  font-size:2.5rem;
   border-bottom-left-radius:1.5rem;
   margin-top: .9rem;
+  
 }
 
 
@@ -95,14 +195,18 @@
   align-items: center;
   justify-content: center;
   padding: .3rem;
-  background-color:orange;
   border-bottom-left-radius:1.5rem;
   margin-top: .9rem;
+  background-color: none;
+  font-size:2.5rem;
 }
+
 @media(max-width:750px){
-html{
-font-size:4px;
+  html{
+    font-size:4px;
+  }
 }
-}
+
+
 
 
